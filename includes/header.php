@@ -23,6 +23,7 @@
             <a href="estetica.php" class="text-white hover:text-blue-600 font-medium">Estética</a>
             <a href="deportiva.php" class="text-white hover:text-blue-600 font-medium">Deportiva</a>
             <a href="contacto.php" class="text-white hover:text-blue-600 font-medium">Contacto</a>
+            <a href="reservas.php" class="text-white hover:text-blue-600 font-medium">Reservas</a>
         </nav>
     </div>
 </header>
