@@ -15,7 +15,7 @@
 
         <a href="https://www.treatwell.es/"
            target="_blank"
-           class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition">
+           class="bg-[#ff5c39] hover:bg-pink-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition">
 
             Reservar en Treatwell
 
