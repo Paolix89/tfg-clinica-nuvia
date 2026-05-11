@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Nuvia</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -19,6 +20,7 @@
         <!-- Menú escritorio -->
         <nav class="hidden md:flex space-x-6">
             <a href="index.php" class="text-white hover:text-[#ff5c39] font-medium">Inicio</a>
+            <a href="nosotros.php" class="text-white hover:text-[#ff5c39] font-medium">Nosotros</a>
             <a href="servicios.php" class="text-white hover:text-[#ff5c39] font-medium">Servicios</a>
             <a href="estetica.php" class="text-white hover:text-[#ff5c39] font-medium">Estética</a>
             <a href="deportiva.php" class="text-white hover:text-[#ff5c39] font-medium">Deportiva</a>
@@ -26,7 +28,7 @@
             <a href="reservas.php" class="text-[#ff5c39] hover:text-white font-medium">Reservas</a>
         </nav>
 
-        <!-- Botón móvil -->
+        <!-- Menú hamburguesa -->
         <button id="menu-btn" class="md:hidden flex flex-col gap-1">
             <span class="w-8 h-1 bg-white rounded"></span>
             <span class="w-8 h-1 bg-white rounded"></span>

@@ -1,0 +1,184 @@
+/* VARIABLES GLOBALES */
+
+:root {
+
+    --color-principal: #0A1F44;
+    --color-secundario: #3A0CA3;
+    --color-acento: #cd4425;
+
+    --color-texto: #1f2937;
+    --color-fondo: #f3f4f6;
+    --color-blanco: #ffffff;
+
+    --sombra-principal: 0 4px 12px rgba(0,0,0,0.1);
+
+    --radio-bordes: 16px;
+
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* CONTENEDOR GENERAL */
+
+.container-custom {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* BOTONES */
+
+.btn-principal {
+
+    background-color: var(--color-blanco);
+
+    color: var(--color-principal);
+
+    padding: 12px 24px;
+
+    border-radius: var(--radio-bordes);
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+}
+
+.btn-principal:hover {
+    background-color: #14d1f1;
+    color: black;
+}
+
+.btn-secundario {
+
+    background-color: var(--color-acento);
+
+    color: var(--color-blanco);
+
+    padding: 12px 24px;
+
+    border-radius: var(--radio-bordes);
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+}
+
+.btn-secundario:hover {
+
+    background-color: #ff5c39;
+    color: black;
+
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+
+    background-color: var(--color-blanco);
+
+    border-radius: var(--radio-bordes);
+
+    box-shadow: var(--sombra-principal);
+
+    overflow: hidden;
+
+}
+
+/* IMÁGENES */
+
+.imagen-cover {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+/* TÍTULOS */
+
+.titulo-seccion {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    margin-bottom: 2rem;
+
+    text-align: center;
+
+}
+
+/* HEADER */
+
+.header-principal {
+
+    background: linear-gradient(
+        to right,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+
+}
+
+/* HERO*/
+
+.hero-overlay {
+
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+/* MENÚ */
+
+.menu-link {
+
+    color: var(--color-blanco);
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+}
+
+.menu-link:hover {
+
+    color: var(--color-acento);
+
+}
+
+/* TEXTO DESTACADO */
+
+.texto-acento {
+
+    color: var(--color-acento);
+
+}
