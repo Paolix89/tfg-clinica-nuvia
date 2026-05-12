@@ -8,10 +8,10 @@ $servicios = $stmt->fetchAll();
 require_once '../includes/header.php';
 ?>
 
-<main class="pt-32">
+<main>
 
     <!-- Cabecera -->
-    <section class="relative text-white">
+    <section class="relative h-screen text-white overflow-hidden">
 
         <!-- Imagen fondo -->
         <div class="absolute inset-0">
@@ -19,10 +19,10 @@ require_once '../includes/header.php';
         </div>
 
         <!-- Overlay oscuro -->
-        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
 
         <!-- Contenido -->
-        <div class="relative max-w-6xl mx-auto px-4 py-32 text-center">
+        <div class="relative h-full flex flex-col justify-center items-center text-center max-w-6xl mx-auto px-4">
 
             <h1 class="text-4xl md:text-6xl font-bold mb-6">
                 Clínica Nuvia
@@ -34,15 +34,13 @@ require_once '../includes/header.php';
 
             <div class="flex flex-col md:flex-row justify-center gap-4">
 
-                <a href="servicios.php"
-                    class="btn-principal">
+                <a href="servicios.php" class="btn-principal">
 
                     Ver servicios
 
                 </a>
 
-                <a href="reservas.php"                    
-                    class="btn-secundario">
+                <a href="reservas.php" class="btn-secundario">
 
                     Reservar cita
 
@@ -54,17 +52,37 @@ require_once '../includes/header.php';
 
     </section>
 
+    <section>
+
+    </section>
+
     <!-- NOSOTROS -->
     <section class="max-w-6xl mx-auto px-4 py-16">
         <div class="bg-white shadow rounded-xl p-8 text-center">
             <h2 class="text-3xl font-bold mb-4">
-                Bienvenido/a a Clínica Nuvia
+                Bienvenido a Clínica Nuvia
             </h2>
 
-            <p class="text-gray-700 max-w-3xl mx-auto">
-                En Clínica Nuvia ofrecemos servicios especializados en medicina estética y medicina deportiva.
-                Nuestro objetivo es proporcionar información clara sobre cada tratamiento y facilitar al paciente
-                el acceso a la reserva de citas mediante Treatwell.
+            <p class="parrafo-personalizado">
+                Bienvenidos a un espacio donde la estética, la
+                salud y el bienestar trabajan juntos para sacar
+                tu mejor versión.
+                En nuestra clinica unimos tecnología
+                avanzada, tratamientos personalizados y
+                atencion profesional para ayudarte a sentirte
+                bien por dentro y por fuera.</br>
+
+                Especializados en estetica y recuperación
+                deportiva, ofrecemos soluciones adaptadas a
+                cada persona: cuidado facial y corporal,
+                tratamientos reafirmantes, recuperacion
+                muscular, fisioterapia, rendimiento deportivo y
+                bienestar integral.<br>
+
+                Nuestro objetivo no es solo que te veas mejor,
+                sino que te sientas fuerte, saludable y seguro
+                de ti mismo cada dia. Porque cuidarse no es
+                un lujo, es una forma de vivir mejor.
             </p>
         </div>
     </section>

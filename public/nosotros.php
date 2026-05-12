@@ -1,101 +1,203 @@
 <?php require_once '../includes/header.php'; ?>
 
-<main class="pt-32">
+<main>
 
-    <!-- CABECERA -->
-    <section class="bg-gradient-to-r from-[#0A1F44] to-[#3A0CA3] text-white py-20">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Sobre Clínica Nuvia
-            </h1>
+    <section class="hero-nos">
 
-            <p class="text-lg max-w-3xl mx-auto">
-                Un equipo especializado en medicina estética y medicina deportiva,
-                orientado a ofrecer una atención cercana, profesional y personalizada.
+        <div class="hero-img img">
+            <img src="/assets/img/equipo-clinica.png" alt="Equipo de la clínica">
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-contenido">
+            <h1>Sobre Clínica Nuvia</h1>
+
+            <p>
+                Medicina estética y deportiva con un enfoque profesional,
+                elegante y centrado en el bienestar de cada paciente.
             </p>
+        </div>
+
+    </section>
+
+    <section class="seccion">
+
+        <div class="tarjeta filosofia-card">
+
+            <div class="filosofia-contenido">
+
+                <p class="texto-superior">
+                    Nuestra filosofía
+                </p>
+
+                <h2 class="titulo-seccion izquierda">
+                    Cuidamos la estética, el bienestar y la salud de forma integral
+                </h2>
+
+                <p class="filosofia-texto">
+                    En Clínica Nuvia entendemos la medicina estética y deportiva como una combinación entre salud,
+                    bienestar y confianza personal. Nuestro enfoque se basa en ofrecer una atención cercana,
+                    profesional y personalizada, adaptando cada tratamiento a las necesidades y objetivos de cada
+                    paciente.
+                </p>
+
+                <p class="filosofia-texto">
+                    Creemos en una medicina estética natural y poco invasiva, enfocada en realzar la imagen personal
+                    sin perder la esencia y naturalidad de cada persona. Por ello, trabajamos con tratamientos
+                    orientados
+                    al cuidado facial, la armonización estética y el bienestar general, priorizando siempre la seguridad
+                    y la confianza médica.
+                </p>
+
+                <p class="filosofia-texto">
+                    Además, integramos la medicina deportiva y el bienestar físico como parte fundamental de nuestra
+                    filosofía,
+                    promoviendo hábitos saludables, prevención y mejora del rendimiento físico desde un enfoque
+                    integral.
+                </p>
+
+                <p class="filosofia-texto">
+                    La experiencia hospitalaria y médica de nuestro equipo nos permite ofrecer un entorno seguro,
+                    profesional y actualizado, donde cada paciente recibe una atención individualizada basada
+                    en la calidad, la cercanía y el cuidado integral.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="seccion-sin-top texto-justificado">
+        <div class="equipo-grid">
+
+            <article class="tarjeta equipo-card">
+                <h3 class="text-xl font-semibold mb-3">
+                    Medicina estética natural
+                </h3>
+
+                <p class="text-gray-700">
+                    Tratamientos de bajo impacto orientados a realzar la imagen personal
+                    sin perder naturalidad.
+                </p>
+            </article>
+
+            <article class="tarjeta equipo-card">
+                <h3 class="text-xl font-semibold mb-3">
+                    Bienestar y salud
+                </h3>
+
+                <p class="text-gray-700">
+                    Un enfoque médico basado en la prevención, la confianza y la atención
+                    personalizada.
+                </p>
+            </article>
+
+            <article class="tarjeta equipo-card">
+                <h3 class="text-xl font-semibold mb-3">
+                    Rendimiento deportivo
+                </h3>
+
+                <p class="text-gray-700">
+                    Apoyo al deportista mediante valoración, hábitos saludables y mejora
+                    del rendimiento físico.
+                </p>
+            </article>
+
         </div>
     </section>
 
-    <!-- PRESENTACIÓN -->
-    <section class="max-w-6xl mx-auto px-4 py-16">
-        <div class="tarjeta p-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">
-                Nuestra filosofía
+    <section class="bg-white py-16">
+        <div class="seccion-sin-top">
+
+            <h2 class="titulo-seccion">
+                Nuestro equipo
             </h2>
 
-            <p class="text-gray-700 max-w-3xl mx-auto">
-                En Clínica Nuvia trabajamos con un enfoque integral, combinando tratamientos
-                de medicina estética y medicina deportiva para mejorar el bienestar, la salud
-                y la confianza de cada paciente.
-            </p>
+            <div class="equipo-grid">
+
+                <article class="tarjeta equipo-card">
+                    <img src="/assets/img/dr/doctora.png" alt="Doctora especialista" class="equipo-img">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Dirección médica
+                    </h3>
+
+                    <p class="equipo-subtitulo">
+                        Medicina estética y deportiva
+                    </p>
+
+                    <p class="text-gray-700">
+                        Profesional médica con más de 25 años de experiencia en el ámbito
+                        hospitalario, especializada en medicina deportiva y medicina estética
+                        avanzada.
+                    </p>
+                </article>
+
+                <article class="tarjeta equipo-card">
+                    <img src="/assets/img/dr/doctor.png" alt="Médico especialista" class="equipo-img">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Área médica
+                    </h3>
+
+                    <p class="equipo-subtitulo">
+                        Medicina hospitalaria y estética
+                    </p>
+
+                    <p class="text-gray-700">
+                        Profesional sanitario con experiencia en el entorno hospitalario,
+                        orientado al cuidado médico, la seguridad del paciente y los tratamientos
+                        estéticos personalizados.
+                    </p>
+                </article>
+
+                <article class="tarjeta equipo-card">
+                    <img src="/assets/img/dr/deportista.png" alt="Especialista deportivo" class="equipo-img">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Área deportiva
+                    </h3>
+
+                    <p class="equipo-subtitulo">
+                        Rendimiento y hábitos saludables
+                    </p>
+
+                    <p class="text-gray-700">
+                        Deportista olímpico encargado del área deportiva, orientada al rendimiento,
+                        la preparación física, la alimentación y el acompañamiento personalizado.
+                    </p>
+                </article>
+
+            </div>
+
         </div>
     </section>
+    <section class="seccion">
 
-    <!-- EQUIPO MÉDICO -->
-    <section class="max-w-6xl mx-auto px-4 pb-16">
-        <h2 class="text-3xl font-bold text-center mb-10">
-            Nuestro equipo médico
-        </h2>
+        <div class="tarjeta contacto-equipo">
 
-        <div class="grid md:grid-cols-3 gap-6">
+            <p class="texto-superior centrado">
+                Atención personalizada
+            </p>
 
-             <article class="tarjeta p-6 text-center">
-                <img src="/assets/img/dr/doctor.jpg" 
-                     alt="Dr. Javier Ruiz" 
-                     class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
+            <h2 class="titulo-seccion">
+                ¿Necesitas asesoramiento personalizado?
+            </h2>
 
-                <h3 class="text-xl font-semibold mb-2">
-                    Dr. Javier Ruiz
-                </h3>
+            <p class="contacto-equipo-texto">
+                Nuestro equipo estará encantado de ayudarte y resolver cualquier duda relacionada
+                con medicina estética, bienestar o rendimiento deportivo.
+                Contacta con Clínica Nuvia y te asesoraremos de forma personalizada según tus necesidades.
+            </p>
 
-                <p class="texto-acento font-medium mb-3">
-                    Medicina Estética
-                </p>
-
-                <p class="text-gray-700">
-                    Especialista en valoración, recuperación y prevención de lesiones deportivas.
-                </p>
-            </article>
-
-
-            <article class="tarjeta p-6 text-center">
-                <img src="/assets/img/dr/doctora.png" 
-                     alt="Dra. Laura Martín" 
-                     class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-
-                <h3 class="text-xl font-semibold mb-2">
-                    Dra. Laura Martín
-                </h3>
-
-                <p class="texto-acento font-medium mb-3">
-                    Medicina estética y deportiva
-                </p>
-
-                <p class="text-gray-700">
-                    Especialista en tratamientos faciales, rejuvenecimiento y cuidado estético personalizado.
-                </p>
-            </article>
-
-           
-            <article class="tarjeta p-6 text-center">
-                <img src="/assets/img/dr/fisio.jpg" 
-                     alt="Deportista Olímpico Alex Sousa" 
-                     class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-
-                <h3 class="text-xl font-semibold mb-2">
-                    Deportista Olímpico Alex Sousa
-                </h3>
-
-                <p class="texto-acento font-medium mb-3">
-                    Fisioterapia y recuperación funcional
-                </p>
-
-                <p class="text-gray-700">
-                    Profesional especializada en recuperación muscular, movilidad y seguimiento funcional.
-                </p>
-            </article>
+            <a href="/public/contacto.php" class="btn-secundario">
+                Contactar con el equipo
+            </a>
 
         </div>
+
     </section>
 
 </main>
