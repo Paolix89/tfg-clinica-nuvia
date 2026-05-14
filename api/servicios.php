@@ -2,16 +2,38 @@
 
 require_once '../includes/db.php';
 
-// Consulta SQL
+/* CATEGORÍA */
+$categoria = $_GET["categoria"] ?? "todos";
+
+/* CONSULTA */
 $sql = "SELECT * FROM servicios WHERE estado = 1";
 
+/* FILTROS */
+if ($categoria == "estetica") {
+
+    $sql .= " AND categoria = 'Estética'";
+
+} elseif ($categoria == "deportiva") {
+
+    $sql .= " AND categoria = 'Deportiva'";
+
+} elseif ($categoria == "infiltraciones") {
+
+    $sql .= " AND categoria = 'Infiltraciones'";
+
+} elseif ($categoria == "bienestar") {
+
+    $sql .= " AND categoria = 'Bienestar'";
+
+}
+
+/* EJECUTAR */
 $stmt = $conexion->query($sql);
 
-// Obtener resultados
+/* RESULTADOS */
 $servicios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Indicar que la respuesta es JSON
+/* JSON */
 header('Content-Type: application/json');
 
-// Convertir array a JSON
 echo json_encode($servicios);

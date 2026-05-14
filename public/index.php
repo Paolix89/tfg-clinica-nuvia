@@ -10,144 +10,202 @@ require_once '../includes/header.php';
 
 <main>
 
-    <!-- Cabecera -->
-    <section class="relative h-screen text-white overflow-hidden">
+    <!-- HERO -->
+    <section class="hero-inicio">
 
-        <!-- Imagen fondo -->
-        <div class="absolute inset-0">
-            <img src="/assets/img/hero.jpg" alt="Clínica estética" class="w-full h-full object-cover">
+        <div class="hero-img">
+            <img src="/assets/img/hero.jpg" alt="Clínica estética">
         </div>
 
-        <!-- Overlay oscuro -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        <div class="hero-overlay-inicio"></div>
 
-        <!-- Contenido -->
-        <div class="relative h-full flex flex-col justify-center items-center text-center max-w-6xl mx-auto px-4">
+        <div class="hero-inicio-contenido">
 
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="hero-titulo fuente-literata">
                 Clínica Nuvia
             </h1>
 
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            <p class="hero-texto">
                 Medicina estética y deportiva con un enfoque profesional, cercano y personalizado.
             </p>
 
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-
-                <a href="servicios.php" class="btn-principal">
-
+            <div class="hero-botones">
+                <a href="/public/servicios.php" class="btn-principal">
                     Ver servicios
-
                 </a>
 
-                <a href="reservas.php" class="btn-secundario">
-
+                <a href="/public/reservas.php" class="btn-secundario">
                     Reservar cita
-
                 </a>
-
             </div>
 
         </div>
-
-    </section>
-
-    <section>
 
     </section>
 
     <!-- NOSOTROS -->
-    <section class="max-w-6xl mx-auto px-4 py-16">
-        <div class="bg-white shadow rounded-xl p-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">
+    <section class="seccion">
+        <div class="tarjeta inicio-presentacion">
+
+            <h2 class="titulo-seccion">
                 Bienvenido a Clínica Nuvia
             </h2>
 
             <p class="parrafo-personalizado">
-                Bienvenidos a un espacio donde la estética, la
-                salud y el bienestar trabajan juntos para sacar
-                tu mejor versión.
-                En nuestra clinica unimos tecnología
-                avanzada, tratamientos personalizados y
-                atencion profesional para ayudarte a sentirte
-                bien por dentro y por fuera.</br>
-
-                Especializados en estetica y recuperación
-                deportiva, ofrecemos soluciones adaptadas a
-                cada persona: cuidado facial y corporal,
-                tratamientos reafirmantes, recuperacion
-                muscular, fisioterapia, rendimiento deportivo y
-                bienestar integral.<br>
-
-                Nuestro objetivo no es solo que te veas mejor,
-                sino que te sientas fuerte, saludable y seguro
-                de ti mismo cada dia. Porque cuidarse no es
-                un lujo, es una forma de vivir mejor.
+                Bienvenidos a un espacio donde la estética, la salud y el bienestar trabajan juntos para sacar
+                tu mejor versión. En nuestra clínica unimos tecnología avanzada, tratamientos personalizados y
+                atención profesional para ayudarte a sentirte bien por dentro y por fuera.
             </p>
+
+            <p class="parrafo-personalizado">
+                Especializados en estética y recuperación deportiva, ofrecemos soluciones adaptadas a cada persona:
+                cuidado facial y corporal, tratamientos reafirmantes, recuperación muscular, fisioterapia,
+                rendimiento deportivo y bienestar integral.
+            </p>
+
+            <p class="parrafo-personalizado">
+                Nuestro objetivo no es solo que te veas mejor, sino que te sientas fuerte, saludable y seguro
+                de ti mismo cada día. Porque cuidarse no es un lujo, es una forma de vivir mejor.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios-home">
+        <div class="beneficios-grid">
+
+            <article class="beneficio-item">
+                <div class="beneficio-icono">◇</div>
+                <h3>Tratamientos personalizados</h3>
+                <p>Planes adaptados a cada paciente.</p>
+            </article>
+
+            <article class="beneficio-item">
+                <div class="beneficio-icono">♡</div>
+                <h3>Profesionales especializados</h3>
+                <p>Equipo médico con amplia experiencia.</p>
+            </article>
+
+            <article class="beneficio-item">
+                <div class="beneficio-icono">✦</div>
+                <h3>Tecnología avanzada</h3>
+                <p>Equipamiento moderno y seguro.</p>
+            </article>
+
+            <article class="beneficio-item">
+                <div class="beneficio-icono">☆</div>
+                <h3>Resultados naturales</h3>
+                <p>Cuidando siempre tu esencia.</p>
+            </article>
+
         </div>
     </section>
 
     <!-- SERVICIOS DESTACADOS -->
-    <section class="max-w-6xl mx-auto px-4 pb-16">
-        <h2 class="text-3xl font-bold text-center mb-10">
+    <section class="seccion-sin-top">
+
+        <h2 class="titulo-seccion">
             Servicios destacados
         </h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="servicios-grid">
+
             <?php foreach ($servicios as $servicio): ?>
-            <article class="bg-white shadow rounded-xl p-6">
+
+            <article class="tarjeta">
 
                 <?php if (!empty($servicio["imagen"])): ?>
-                <img src="/<?php echo trim($servicio["imagen"]); ?>" alt="<?php echo $servicio["nombre"]; ?>"
-                    class="w-full h-48 object-cover rounded-lg mb-4">
+                <img src="/<?php echo htmlspecialchars(trim($servicio["imagen"])); ?>"
+                    alt="<?php echo htmlspecialchars($servicio["nombre"]); ?>" class="servicio-img">
                 <?php endif; ?>
 
-                <h3 class="text-xl font-semibold mb-2">
-                    <?php echo $servicio["nombre"]; ?>
-                </h3>
+                <div class="servicio-contenido">
 
-                <p class="text-sm text-[#ff5c39] font-medium mb-2">
-                    <?php echo $servicio["categoria"]; ?>
-                </p>
+                    <p class="servicio-categoria">
+                        <?php echo htmlspecialchars($servicio["categoria"]); ?>
+                    </p>
 
-                <p class="text-gray-700">
-                    <?php echo $servicio["descripcion"]; ?>
-                </p>
+                    <h3 class="servicio-titulo">
+                        <?php echo htmlspecialchars($servicio["nombre"]); ?>
+                    </h3>
+
+                    <p class="servicio-descripcion">
+                        <?php echo htmlspecialchars($servicio["descripcion"]); ?>
+                    </p>
+
+                </div>
+
             </article>
+
             <?php endforeach; ?>
+
         </div>
+
+    </section>
+
+    <section class="banner-clinica">
+
+        <img src="/assets/img/sala-deportiva1.png" alt="Instalaciones Clínica Nuvia">
+
+        <div class="banner-overlay"></div>
+
+        <div class="banner-contenido">
+
+            <p class="banner-superior">
+                Rendimiento y recuperación
+            </p>
+
+            <h2>
+                Un espacio diseñado para mejorar tu bienestar físico
+            </h2>
+
+            <p>
+                Nuestra sala deportiva combina tecnología, seguimiento profesional y
+                entrenamiento funcional para ayudarte a prevenir lesiones, recuperarte
+                y mejorar tu rendimiento de forma segura y personalizada.
+            </p>
+
+        </div>
+
     </section>
 
     <!-- POR QUÉ ELEGIRNOS -->
-    <section class="bg-white py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">
+    <section class="bloque-blanco">
+
+        <div class="seccion">
+
+            <h2 class="titulo-seccion">
                 ¿Por qué elegir Clínica Nuvia?
             </h2>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gray-100 rounded-xl p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-3">Atención personalizada</h3>
-                    <p class="text-gray-700">
+            <div class="valores-grid">
+
+                <article class="tarjeta valor-card">
+                    <h3>Atención personalizada</h3>
+                    <p>
                         Cada paciente recibe una orientación adaptada a sus necesidades.
                     </p>
-                </div>
+                </article>
 
-                <div class="bg-gray-100 rounded-xl p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-3">Servicios especializados</h3>
-                    <p class="text-gray-700">
+                <article class="tarjeta valor-card">
+                    <h3>Servicios especializados</h3>
+                    <p>
                         Tratamientos enfocados en estética y recuperación deportiva.
                     </p>
-                </div>
+                </article>
 
-                <div class="bg-gray-100 rounded-xl p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-3">Reserva online</h3>
-                    <p class="text-gray-700">
+                <article class="tarjeta valor-card">
+                    <h3>Reserva online</h3>
+                    <p>
                         Acceso sencillo a la reserva de citas mediante Treatwell.
                     </p>
-                </div>
+                </article>
+
             </div>
+
         </div>
+
     </section>
 
 </main>

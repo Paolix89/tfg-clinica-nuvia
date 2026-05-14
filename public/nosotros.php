@@ -27,9 +27,9 @@
 
             <div class="filosofia-contenido">
 
-                <p class="texto-superior">
+                <h1 class="texto-superior fuente-literata">
                     Nuestra filosofía
-                </p>
+                </h1>
 
                 <h2 class="titulo-seccion izquierda">
                     Cuidamos la estética, el bienestar y la salud de forma integral
@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-16">
+    <section class="bg-[#c9a96a] py-16">
         <div class="seccion-sin-top">
 
             <h2 class="titulo-seccion">

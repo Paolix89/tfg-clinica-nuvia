@@ -1,25 +1,90 @@
 <?php require_once '../includes/header.php'; ?>
 
-<main class="max-w-4xl mx-auto pt-28 pb-10 px-4">
+<main>
 
-    <section class="bg-white shadow rounded-xl p-8 text-center">
+    <section class="hero-nos">
+        <div class="hero-img">
+            <img src="/assets/img/hall1.png" alt="Reserva de cita Clínica Nuvia">
+        </div>
 
-        <h1 class="text-4xl font-bold mb-6">
-            Reserva tu cita
-        </h1>
+        <div class="hero-overlay"></div>
 
-        <p class="text-gray-700 mb-8">
-            Las reservas de la clínica se gestionan mediante la plataforma externa Treatwell.
-            Desde el siguiente enlace podrás consultar disponibilidad y reservar tu cita de forma rápida y sencilla.
-        </p>
+        <div class="hero-contenido">
+            <h1>Reserva tu cita</h1>
+            <p>
+                Solicita información o accede a Treatwell para gestionar tu reserva de forma externa.
+            </p>
+        </div>
+    </section>
 
-        <a href="https://www.treatwell.es/"
-           target="_blank"
-           class="bg-[#ff5c39] hover:bg-pink-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition">
+    <section class="cta-tratamientos">
 
-            Reservar en Treatwell
+        <div class="cta-box">
 
-        </a>
+            <p class="texto-superior">
+                Reserva online
+            </p>
+
+            <h2>
+                Gestión de citas mediante Treatwell
+            </h2>
+
+            <p>
+                Clínica Nuvia contempla la integración con la plataforma Treatwell para facilitar
+                la reserva de citas online. Actualmente, al tratarse de un proyecto en desarrollo,
+                el enlace dirige a la página principal de Treatwell hasta disponer de un perfil público
+                específico de la clínica.
+            </p>
+
+            <div class="cta-botones">
+                <a href="https://www.treatwell.es/"
+                   target="_blank"
+                   class="btn-secundario hover-btn">
+                    Ir a Treatwell
+                </a>
+
+                <a href="/public/contacto.php"
+                   class="btn-principal hover-btn">
+                    Contactar
+                </a>
+            </div>
+
+        </div>
+
+        <div class="formulario-cta">
+
+            <h3>
+                Solicitud de información
+            </h3>
+
+            <form>
+
+                <div class="form-grid">
+                    <input type="text" placeholder="Nombre y apellidos*">
+                    <input type="tel" placeholder="Teléfono*">
+                </div>
+
+                <div class="form-grid">
+                    <input type="email" placeholder="Email*">
+
+                    <select>
+                        <option>Tipo de consulta</option>
+                        <option>Medicina estética</option>
+                        <option>Medicina deportiva</option>
+                        <option>Infiltraciones</option>
+                        <option>Bienestar integral</option>
+                    </select>
+                </div>
+
+                <textarea placeholder="Mensaje opcional..."></textarea>
+
+                <button type="submit" class="btn-formulario">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </div>
 
     </section>
 
