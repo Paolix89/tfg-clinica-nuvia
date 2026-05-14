@@ -13,7 +13,7 @@ require_once '../includes/header.php';
     <!-- HERO -->
     <section class="hero-inicio">
 
-        <div class="hero-img">
+        <div class="hero-img hero-home-img">
             <img src="/assets/img/clinica.png" alt="Clínica estética">
         </div>
 
@@ -117,8 +117,7 @@ require_once '../includes/header.php';
         </div>
     </section>
 
-    <!-- SERVICIOS DESTACADOS -->
-    <section class="seccion-sin-top">
+    <section class="seccion-sin-top servicios-destacados-home">
 
         <h2 class="titulo-seccion">
             Servicios destacados
@@ -128,11 +127,29 @@ require_once '../includes/header.php';
 
             <?php foreach ($servicios as $servicio): ?>
 
-            <article class="tarjeta">
+            <?php
+$categoria = strtolower($servicio["categoria"]);
+
+if ($categoria == "estética") {
+    $url = "/public/tratamientos/estetica.php";
+} elseif ($categoria == "deportiva") {
+    $url = "/public/tratamientos/deportiva.php";
+} elseif ($categoria == "infiltraciones") {
+    $url = "/public/tratamientos/infiltraciones.php";
+} elseif ($categoria == "bienestar") {
+    $url = "/public/tratamientos/bienestar.php";
+} else {
+    $url = "/public/servicios.php";
+}
+?>
+
+            <a href="<?php echo $url; ?>" class="tarjeta servicio-card servicio-destacado-link tratamiento-card">
 
                 <?php if (!empty($servicio["imagen"])): ?>
-                <img src="/<?php echo htmlspecialchars(trim($servicio["imagen"])); ?>"
-                    alt="<?php echo htmlspecialchars($servicio["nombre"]); ?>" class="servicio-img">
+                <div class="tratamiento-img-wrap">
+                    <img src="/<?php echo htmlspecialchars(trim($servicio["imagen"])); ?>"
+                        alt="<?php echo htmlspecialchars($servicio["nombre"]); ?>" class="servicio-img">
+                </div>
                 <?php endif; ?>
 
                 <div class="servicio-contenido">
@@ -149,9 +166,13 @@ require_once '../includes/header.php';
                         <?php echo htmlspecialchars($servicio["descripcion"]); ?>
                     </p>
 
+                    <a href="/public/contacto.php" class="tratamiento-link">
+                        Solicitar información
+                    </a>
+
                 </div>
 
-            </article>
+            </a>
 
             <?php endforeach; ?>
 
@@ -274,21 +295,26 @@ require_once '../includes/header.php';
 
             <form class="banner-formulario-form">
 
-                <input type="text" placeholder="Nombre y apellidos*">
+                <label for="nombre" class="sr-only">Nombre y apellidos</label>
+                <input type="text" id="nombre" placeholder="Nombre y apellidos*">
 
-                <input type="tel" placeholder="Teléfono*">
+                <label for="telefono" class="sr-only">Teléfono</label>
+                <input type="tel" id="telefono" placeholder="Teléfono*">
 
-                <input type="email" placeholder="Email*">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" placeholder="Email*">
 
-                <select>
-                    <option>Tratamiento de interés</option>
-                    <option>Medicina estética</option>
-                    <option>Medicina deportiva</option>
-                    <option>Infiltraciones</option>
-                    <option>Bienestar integral</option>
+                <label for="tratamiento" class="sr-only"></label>
+                <select id="tratamiento" name="tratamiento">
+                    <option value="" disabled selected>Seleccione un tratamiento</option>
+                    <option value="medicina-estetica">Medicina estética</option>
+                    <option value="medicina-deportiva">Medicina deportiva</option>
+                    <option value="infiltraciones">Infiltraciones</option>
+                    <option value="bienestar-integral">Bienestar integral</option>
                 </select>
 
-                <textarea placeholder="Mensaje opcional..."></textarea>
+                <label for="mensaje" class="sr-only">Mensaje</label>
+                <textarea id="mensaje" placeholder="Mensaje opcional..."></textarea>
 
                 <button type="submit" class="btn-formulario">
                     Enviar consulta

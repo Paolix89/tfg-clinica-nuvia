@@ -150,7 +150,7 @@
 
     </section>
 
-    <section class="banner-pequeno">
+    <!--<section class="banner-pequeno">
 
         <div class="banner-pequeno-img">
 
@@ -176,7 +176,7 @@
 
         </div>
 
-    </section>
+    </section>-->
 
 </main>
 

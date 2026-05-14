@@ -11,7 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,200..900&display=swap" rel="stylesheet">      
+    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,200..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -33,11 +34,10 @@
                         Tratamientos
                     </a>
                     <div class="submenu">
-                        <a href="/public/servicios.php?categoria=estetica">Medicina estética facial</a>
-                        <a href="/public/servicios.php?categoria=deportiva">Medicina deportiva</a>
-                        <a href="/public/servicios.php?categoria=infiltraciones">Infiltraciones y tratamientos
-                            articulares</a>
-                        <a href="/public/servicios.php?categoria=bienestar">Bienestar integral</a>
+                        <a href="/public/tratamientos/estetica.php">Medicina estética</a>
+                        <a href="/public/tratamientos/deportiva.php">Medicina deportiva</a>
+                        <a href="/public/tratamientos/infiltraciones.php">Infiltraciones</a>
+                        <a href="/public/tratamientos/bienestar.php">Bienestar integral</a>
                     </div>
                 </div>
                 <a href="/public/reservas.php" class="menu-link menu-link-destacado">Reservas</a>
@@ -45,7 +45,7 @@
 
             </nav>
 
-            <button id="menu-btn" class="menu-btn" type="button aria-label=" Abrir menú de navegación"">
+            <button id="menu-btn" class="menu-btn" type="button" aria-label="Abrir menú de navegación">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -58,10 +58,11 @@
                 <a href="/public/index.php" class="menu-movil-link">Inicio</a>
                 <a href="/public/nosotros.php" class="menu-movil-link menu-link-destacado">Nosotros</a>
                 <a href="/public/servicios.php" class="menu-movil-link">Tratamientos</a>
-                <a href="/public/servicios.php?categoria=estetica" class="menu-movil-link">Medicina estética facial</a>
-                <a href="/public/servicios.php?categoria=deportiva" class="menu-movil-link">Medicina deportiva</a>
-                <a href="/public/servicios.php?categoria=infiltraciones" class="menu-movil-link">Infiltraciones</a>
-                <a href="/public/servicios.php?categoria=bienestar" class="menu-movil-link">Bienestar integral</a>
+                <a href="/public/tratamientos/estetica.php" class="menu-movil-link">Medicina estética
+                    facial</a>
+                <a href="/public/tratamientos/deportiva.php" class="menu-movil-link">Medicina deportiva</a>
+                <a href="/public/tratamientos/infiltraciones.php" class="menu-movil-link">Infiltraciones</a>
+                <a href="/public/tratamientos/bienestar.php" class="menu-movil-link">Bienestar integral</a>
                 <a href="/public/reservas.php" class="menu-movil-link menu-link-destacado">Reservas</a>
                 <a href="/public/contacto.php" class="menu-movil-link">Contacto</a>
 

@@ -98,6 +98,8 @@ body {
     align-items: center;
 }
 
+
+
 .logo-link {
     display: flex;
     align-items: center;
@@ -274,7 +276,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 
 .hero-overlay {
@@ -441,6 +443,10 @@ body {
     object-position: center 20%;
 }
 
+.hero-home-img img {
+    object-position: center 45%;
+}
+
 .hero-contenido {
     position: relative;
     z-index: 2;
@@ -562,9 +568,10 @@ body {
 
 .servicio-img {
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
     border-radius: 48px 48px 0 0;
+    filter: brightness(0.95) contrast(0.95);
 }
 
 .servicio-contenido {
@@ -586,6 +593,21 @@ body {
 .servicio-descripcion {
     color: #4b5563;
     line-height: 1.6;
+}
+
+.servicio-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio-contenido {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tratamiento-link {
+    margin-top: auto;
 }
 
 .banner-clinica {
@@ -667,7 +689,7 @@ body {
 }
 
 .banner-formulario-texto p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.8;
     font-size: 1.1rem;
 }
@@ -683,9 +705,9 @@ body {
 .banner-formulario-form textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
-    background-color: rgba(255,255,255,0.08);
+    background-color: rgba(255, 255, 255, 0.08);
     color: var(--color-blanco);
     font-size: 1rem;
     outline: none;
@@ -693,11 +715,11 @@ body {
 
 .banner-formulario-form input::placeholder,
 .banner-formulario-form textarea::placeholder {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .banner-formulario-form select {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .banner-formulario-form textarea {
@@ -708,6 +730,12 @@ body {
 
 .banner-formulario-form button {
     grid-column: span 2;
+}
+
+
+.banner-formulario-form select option {
+    color: #333;
+    background-color: #fff;
 }
 
 
@@ -1086,7 +1114,7 @@ body {
 
 .valores-grid-4 {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -1097,6 +1125,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .intro-home {
     max-width: 1200px;
     margin: 5rem auto;
@@ -1148,7 +1177,7 @@ body {
 }
 
 .intro-home-destacados div:not(:last-child) {
-    border-right: 1px solid rgba(255,255,255,0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .intro-home-destacados span {
@@ -1164,6 +1193,54 @@ body {
     font-weight: 600;
 }
 
+.tratamiento-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecerTratamiento 0.7s ease forwards;
+    border: 1px solid rgba(201, 169, 106, 0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.tratamiento-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 24px 45px rgba(13, 27, 42, 0.22),
+        0 0 0 1px rgba(201, 169, 106, 0.25);
+}
+
+.tratamiento-img-wrap {
+    overflow: hidden;
+    border-radius: 48px 48px 0 0;
+}
+
+.tratamiento-img-wrap img {
+    transition: transform 0.5s ease;
+}
+
+.tratamiento-card:hover .tratamiento-img-wrap img {
+    transform: scale(1.08);
+}
+
+.tratamiento-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-dorado-texto);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.tratamiento-link:hover {
+    color: var(--color-principal);
+    transform: translateX(6px);
+}
+
+@keyframes aparecerTratamiento {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 /* RESPONSIVE */
@@ -1236,9 +1313,9 @@ body {
     }
 
     .valor-icono {
-    font-size: 2.4rem;
-    color: var(--color-secundario);
-    margin-bottom: 1.5rem;
+        font-size: 2.4rem;
+        color: var(--color-secundario);
+        margin-bottom: 1.5rem;
     }
 
     .banner-formulario-contenido {
@@ -1255,20 +1332,27 @@ body {
         grid-column: span 1;
     }
 
-       .intro-home-contenido,
+    .intro-home-contenido,
     .intro-home-destacados {
         grid-template-columns: 1fr;
     }
 
     .intro-home-destacados div:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .intro-home-img img {
         height: 300px;
     }
 
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
 
 }
 
@@ -1281,7 +1365,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .valores-grid-4{
+    .valores-grid-4 {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -1296,7 +1380,7 @@ body {
     }
 
     .logo-img {
-        height: 2 .hero-botones {
+        .hero-botones {
             flex-direction: column;
         }
 
@@ -1334,3 +1418,4 @@ body {
             align-items: center;
         }
     }
+}

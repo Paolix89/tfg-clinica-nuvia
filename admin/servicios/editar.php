@@ -63,12 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar servicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100">
 
     <main class="max-w-2xl mx-auto py-10 px-4">
@@ -78,37 +80,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form method="POST" enctype="multipart/form-data" class="space-y-4">
                 <div>
                     <label class="block mb-1 font-medium">Nombre</label>
-                    <input type="text" name="nombre" value="<?php echo $servicio["nombre"]; ?>" required class="w-full border rounded-lg px-3 py-2">
+                    <input type="text" name="nombre" value="<?php echo $servicio["nombre"]; ?>" required
+                        class="w-full border rounded-lg px-3 py-2">
                 </div>
 
                 <div>
                     <label class="block mb-1 font-medium">Descripción</label>
-                    <textarea name="descripcion" required class="w-full border rounded-lg px-3 py-2"><?php echo $servicio["descripcion"]; ?></textarea>
+                    <textarea name="descripcion" required
+                        class="w-full border rounded-lg px-3 py-2"><?php echo $servicio["descripcion"]; ?></textarea>
                 </div>
 
                 <div>
                     <label class="block mb-1 font-medium">Categoría</label>
                     <select name="categoria" class="w-full border rounded-lg px-3 py-2">
-                    <option value="Estética" 
-                    <?php if ($servicio["categoria"] == "Estética") echo "selected"; ?>>
-                    Estética
-                    </option>
-
-                    <option value="Deportiva"
-                    <?php if ($servicio["categoria"] == "Deportiva") echo "selected"; ?>>
-                    Deportiva
-                    </option>
-
+                        <option value="Estética" <?php if ($servicio["categoria"] == "Estética") echo "selected"; ?>
+                            Estética</option>
+                        <option value="Deportiva" <?php if ($servicio["categoria"] == "Deportiva") echo "selected"; ?>
+                            Deportiva</option>
+                        <option value="Infiltraciones"
+                            <?php if ($servicio["categoria"] == "Infiltraciones") echo "selected"; ?>Infiltraciones
+                            </option>
+                        <option value="Bienestar" <?php if ($servicio["categoria"] == "Bienestar") echo "selected"; ?>
+                            Bienestar</option>
                     </select>
                 </div>
 
                 <div class="mb-4">
                     <label class="block font-medium mb-2">Imagen</label>
                     <input type="file" name="imagen" class="w-full border rounded-lg px-3 py-2">
-                
+
                     <?php if (!empty($servicio["imagen"])): ?>
-                        <p>Imagen actual:</p>
-                        <img src="/<?php echo $servicio["imagen"]; ?>" alt="<?php echo $servicio["nombre"]; ?>" class="w-40 rounded-lg mb-4">
+                    <p>Imagen actual:</p>
+                    <img src="/<?php echo $servicio["imagen"]; ?>" alt="<?php echo $servicio["nombre"]; ?>"
+                        class="w-40 rounded-lg mb-4">
                     <?php endif; ?>
                 </div>
 
@@ -121,7 +125,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a href="index.php" class="text-gray-700 underline">Volver</a>
             </div>
         </div>
-</main>
+    </main>
 
 </body>
+
 </html>
