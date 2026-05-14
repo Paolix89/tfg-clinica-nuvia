@@ -13,10 +13,10 @@
         <div class="hero-contenido">
             <h1>Sobre Clínica Nuvia</h1>
 
-            <p>
+           <!--<p>
                 Medicina estética y deportiva con un enfoque profesional,
                 elegante y centrado en el bienestar de cada paciente.
-            </p>
+            </p>-->
         </div>
 
     </section>

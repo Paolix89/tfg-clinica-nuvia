@@ -5,7 +5,7 @@
     <section class="hero-nos">
 
         <div class="hero-img">
-            <img src="/assets/img/hall1.png"
+            <img src="/assets/img/recepcion.png"
                  alt="Contacto Clínica Nuvia">
         </div>
 
@@ -17,10 +17,10 @@
                 Contacto
             </h1>
 
-            <p>
+            <!--<p>
                 Estamos aquí para ayudarte y resolver cualquier duda
                 sobre nuestros tratamientos y servicios.
-            </p>
+            </p>-->
 
         </div>
 
@@ -154,7 +154,7 @@
 
         <div class="banner-pequeno-img">
 
-            <img src="/assets/img/equipo-clinica.png"
+            <img src="/assets/img/medicos.png"
                  alt="Equipo Clínica Nuvia">
 
         </div>

@@ -12,10 +12,10 @@
 
         <div class="hero-contenido">
             <h1>Tratamientos</h1>
-            <p>
+            <!--<p>
                 Medicina estética, deportiva y bienestar con un enfoque médico,
                 personalizado y natural.
-            </p>
+            </p>-->
         </div>
     </section>
 

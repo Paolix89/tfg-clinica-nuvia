@@ -4,16 +4,16 @@
 
     <section class="hero-nos">
         <div class="hero-img">
-            <img src="/assets/img/hall1.png" alt="Reserva de cita Clínica Nuvia">
+            <img src="/assets/img/hall2.png" alt="Reserva de cita Clínica Nuvia">
         </div>
 
         <div class="hero-overlay"></div>
 
         <div class="hero-contenido">
             <h1>Reserva tu cita</h1>
-            <p>
+           <!-- <p>
                 Solicita información o accede a Treatwell para gestionar tu reserva de forma externa.
-            </p>
+            </p>-->
         </div>
     </section>
 
