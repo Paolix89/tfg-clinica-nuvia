@@ -35,38 +35,24 @@ require_once '../includes/header.php';
 
     <!-- NOSOTROS -->
     <section class="intro-home">
-
         <div class="intro-home-contenido">
-
             <div class="intro-home-texto">
+                <p class="texto-superior"> Clínica Nuvia </p>
 
-                <p class="texto-superior">
-                    Clínica Nuvia
-                </p>
+                <h2> Medicina estética y deportiva con un enfoque integral </h2>
 
-                <h2>
-                    Medicina estética y deportiva con un enfoque integral
-                </h2>
+                <p> Unimos experiencia médica, tratamientos personalizados y bienestar
+                    físico para ayudarte a cuidar tu imagen, tu salud y tu confianza. </p>
 
-                <p>
-                    Unimos experiencia médica, tratamientos personalizados y bienestar
-                    físico para ayudarte a cuidar tu imagen, tu salud y tu confianza.
-                </p>
-
-                <a href="/public/nosotros.php" class="btn-secundario hover-btn">
-                    Conoce la clínica
-                </a>
-
+                <a href="/public/nosotros.php" class="btn-secundario hover-btn"> Conoce la clínica </a>
             </div>
 
             <div class="intro-home-img">
                 <img src="/assets/img/hero.jpg" alt="Clínica Nuvia">
             </div>
-
         </div>
 
         <div class="intro-home-destacados">
-
             <div>
                 <span>01</span>
                 <p>Atención personalizada</p>
@@ -81,7 +67,6 @@ require_once '../includes/header.php';
                 <span>03</span>
                 <p>Bienestar y recuperación</p>
             </div>
-
         </div>
 
     </section>
@@ -119,60 +104,54 @@ require_once '../includes/header.php';
 
     <section class="seccion-sin-top servicios-destacados-home">
 
-        <h2 class="titulo-seccion">
-            Servicios destacados
-        </h2>
+        <h2 class="titulo-seccion">Servicios destacados</h2>
 
         <div class="servicios-grid">
 
             <?php foreach ($servicios as $servicio): ?>
 
             <?php
-$categoria = strtolower($servicio["categoria"]);
+            $categoria = strtolower($servicio["categoria"]);
 
-if ($categoria == "estética") {
-    $url = "/public/tratamientos/estetica.php";
-} elseif ($categoria == "deportiva") {
-    $url = "/public/tratamientos/deportiva.php";
-} elseif ($categoria == "infiltraciones") {
-    $url = "/public/tratamientos/infiltraciones.php";
-} elseif ($categoria == "bienestar") {
-    $url = "/public/tratamientos/bienestar.php";
-} else {
-    $url = "/public/servicios.php";
-}
-?>
+            if ($categoria == "estética") {
+            $url = "/public/tratamientos/estetica.php";
+            } elseif ($categoria == "deportiva") {
+            $url = "/public/tratamientos/deportiva.php";
+            } elseif ($categoria == "infiltraciones") {
+            $url = "/public/tratamientos/infiltraciones.php";
+            } elseif ($categoria == "bienestar") {
+            $url = "/public/tratamientos/bienestar.php";
+            } else {
+            $url = "/public/servicios.php";
+            }
+            ?>
 
-            <a href="<?php echo $url; ?>" class="tarjeta servicio-card servicio-destacado-link tratamiento-card">
+            <article class="tarjeta servicio-card servicio-destacado-link tratamiento-card">
 
-                <?php if (!empty($servicio["imagen"])): ?>
-                <div class="tratamiento-img-wrap">
-                    <img src="/<?php echo htmlspecialchars(trim($servicio["imagen"])); ?>"
-                        alt="<?php echo htmlspecialchars($servicio["nombre"]); ?>" class="servicio-img">
-                </div>
-                <?php endif; ?>
+                <a href="<?php echo $url; ?>" class="servicio-card-link">
 
-                <div class="servicio-contenido">
+                    <?php if (!empty($servicio["imagen"])): ?>
+                    <div class="tratamiento-img-wrap">
+                        <img src="/<?php echo htmlspecialchars(trim($servicio["imagen"])); ?>"
+                            alt="<?php echo htmlspecialchars($servicio["nombre"]); ?>" class="servicio-img">
+                    </div>
+                    <?php endif; ?>
 
-                    <p class="servicio-categoria">
-                        <?php echo htmlspecialchars($servicio["categoria"]); ?>
-                    </p>
+                    <div class="servicio-contenido">
 
-                    <h3 class="servicio-titulo">
-                        <?php echo htmlspecialchars($servicio["nombre"]); ?>
-                    </h3>
+                        <p class="servicio-categoria"><?php echo htmlspecialchars($servicio["categoria"]); ?></p>
 
-                    <p class="servicio-descripcion">
-                        <?php echo htmlspecialchars($servicio["descripcion"]); ?>
-                    </p>
+                        <h3 class="servicio-titulo"><?php echo htmlspecialchars($servicio["nombre"]); ?></h3>
 
-                    <a href="/public/contacto.php" class="tratamiento-link">
-                        Solicitar información
-                    </a>
+                        <p class="servicio-descripcion"><?php echo htmlspecialchars($servicio["descripcion"]); ?></p>
 
-                </div>
+                        <span class="tratamiento-link">Ver tratamiento</span>
 
-            </a>
+                    </div>
+
+                </a>
+
+            </article>
 
             <?php endforeach; ?>
 

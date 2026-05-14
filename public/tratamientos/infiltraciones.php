@@ -4,7 +4,7 @@
 
     <section class="hero-nos">
         <div class="hero-img">
-            <img src="/assets/img/sala-pruebas.png" alt="Infiltraciones Clínica Nuvia">
+            <img src="/assets/img/servicios/hero-inf.jpg" alt="Infiltraciones Clínica Nuvia">
         </div>
 
         <div class="hero-overlay"></div>
