@@ -4,7 +4,7 @@
 
 <section class="hero-nos">
     <div class="hero-img">
-        <img src="/assets/img/servicios/botox2.jpg" alt="Medicina estética Clínica Nuvia">
+        <img src="/assets/img/hero-estetica.jpg" alt="Medicina estética Clínica Nuvia">
     </div>
 
     <div class="hero-overlay"></div>

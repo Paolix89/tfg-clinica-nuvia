@@ -90,13 +90,16 @@ body {
 }
 
 .header-contenedor {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 
@@ -227,6 +230,7 @@ body {
     border-radius: 20px 20px 0 0;
     box-shadow: var(--sombra-principal);
     overflow: hidden;
+    height: 100%;
 }
 
 /* IMÁGENES */
@@ -312,10 +316,15 @@ body {
     bottom: 7% !important;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 900px;
-    padding: 0 2rem;
+    max-width: 750px;
+    padding: 30px;
     text-align: center;
     z-index: 5;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-texto-home {
@@ -325,6 +334,7 @@ body {
     line-height: 1.8;
     font-weight: 500;
     color: white;
+    text-align: justify;
     text-shadow: 0 3px 12px rgba(0, 0, 0, .7);
 }
 
@@ -336,9 +346,9 @@ body {
 }
 
 .hero-texto {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    max-width: 750px;
 }
 
 .hero-texto-grande {
@@ -358,15 +368,7 @@ body {
     flex-wrap: wrap;
 }
 
-.header-contenedor {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 1rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .logo-link {
     margin-right: auto;
@@ -610,28 +612,21 @@ body {
 /* SERVICIOS */
 .servicios-grid {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
+    align-items: stretch;
 }
 
 .servicio-card {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 48px 48px 0 0;
-    overflow: hidden;
 }
 
 .servicio-card-link {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
 }
 
-.servicio-card-link .servicio-contenido {
-    flex: 1;
-}
 
 .servicio-card-link:hover .tratamiento-img-wrap img {
     transform: scale(1.05);
@@ -645,9 +640,7 @@ body {
     filter: brightness(0.95) contrast(0.95);
 }
 
-.servicio-contenido {
-    padding: 1.5rem;
-}
+
 
 .servicio-categoria {
     color: var(--color-dorado-texto);
@@ -664,22 +657,22 @@ body {
 .servicio-descripcion {
     color: #4b5563;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .servicio-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .servicio-contenido {
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding: 1.5rem;
 }
 
-.tratamiento-link {
-    margin-top: auto;
-}
 
 .banner-clinica {
     position: relative;
@@ -748,7 +741,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
     gap: 4rem;
     align-items: center;
 }
@@ -952,7 +944,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
 }
@@ -1010,14 +1001,13 @@ body {
     margin: 6rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
     gap: 3rem;
     align-items: center;
 }
 
 .cta-box {
     background-color: var(--color-principal);
-    padding: 4rem;
+    padding: 1.4rem;
     border-radius: 40px 40px 0 0;
     color: var(--color-blanco);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
@@ -1054,7 +1044,6 @@ body {
     margin: 4rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
 }
@@ -1149,7 +1138,6 @@ body {
     margin: 5rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 3rem;
 }
 
@@ -1205,7 +1193,6 @@ body {
 
 .intro-home-contenido {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
 }
@@ -1235,7 +1222,6 @@ body {
 .intro-home-destacados {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     background-color: var(--color-principal);
     color: var(--color-blanco);
     border-radius: 35px 35px 0 0;
@@ -1293,12 +1279,13 @@ body {
 }
 
 .tratamiento-link {
-    display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: auto;
+    display: block;
     color: var(--color-dorado-texto);
     font-weight: 700;
     text-decoration: none;
     transition: 0.3s ease;
+    padding-top: 1.5rem;
 }
 
 .tratamiento-link:hover {
@@ -1436,7 +1423,40 @@ body {
     top: 0 !important;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(15, 15, 15, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 1023px) {
+    .hero-img img {
+        content: url("../img/entrada-clinica.png");
+    }
+
+    .hero-texto {
+        font-size: 2rem;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 900px) {
+
 
     .footer-contenedor {
         grid-template-columns: 1fr;
@@ -1460,6 +1480,9 @@ body {
 /* RESPONSIVE */
 
 @media (min-width: 768px) {
+
+
+
     .hero-botones {
         flex-direction: row;
     }
@@ -1589,47 +1612,60 @@ body {
         display: none;
     }
 
+    .hero {
+        background-image: url("../img/entrada-clinica.png");
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
     .menu-btn {
         display: flex;
     }
 
     .logo-img {
-        .hero-botones {
-            flex-direction: column;
-        }
+        max-width: 130px;
+        height: auto;
+    }
 
-        .hero-texto {
-            font-size: 1.05rem;
-        }
+    .hero-botones {
+        flex-direction: column;
+    }
 
-        .inicio-presentacion {
-            padding: 2rem;
-        }
+    .hero-texto {
+        font-size: 1.20rem;
+    }
 
-        .hero-nos {
-            height: 75vh;
-        }
+    .inicio-presentacion {
+        padding: 2rem;
+    }
 
-        .hero-contenido p {
-            font-size: 1.1rem;
-            text-align: center;
-        }
+    .hero-nos {
+        height: 75vh;
+    }
 
-        .filosofia-card {
-            padding: 2rem;
-        }
+    .hero-contenido p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
 
-        .banner-clinica {
-            min-height: 60vh;
-        }
+    .filosofia-card {
+        padding: 2rem;
+    }
 
-        .banner-clinica img {
-            min-height: 60vh;
-        }
+    .banner-clinica {
+        min-height: 60vh;
+    }
 
-        .banner-contenido {
-            text-align: center;
-            align-items: center;
-        }
+    .banner-clinica img {
+        min-height: 60vh;
+    }
+
+    .banner-contenido {
+        text-align: center;
+        align-items: center;
     }
 }

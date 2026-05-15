@@ -19,11 +19,9 @@ require_once '../includes/header.php';
 
         <div class="hero-inicio-contenido">
 
-            <p class="hero-texto hero-texto-home">
-                En Clínica Nuvia combinamos medicina estética, deportiva y bienestar integral para ayudarte a sentirte
-                bien por dentro y por fuera. Trabajamos con un enfoque profesional, cercano y totalmente personalizado,
-                utilizando tratamientos seguros, innovadores y respaldados por la evidencia científica. Nuestro objetivo
-                es realzar tu belleza natural, mejorar tu salud y acompañarte en cada paso hacia tu mejor versión.
+            <p class="hero-texto hero-texto-home">            
+                Un espacio pensado para ayudarte a sentirte mejor, cuidando tu salud, bienestar y confianza de forma
+                personalizada.
             </p>
 
             <div class="hero-botones">
@@ -50,7 +48,7 @@ require_once '../includes/header.php';
                 <p> Unimos experiencia médica, tratamientos personalizados y bienestar
                     físico para ayudarte a cuidar tu imagen, tu salud y tu confianza. </p>
 
-                <a href="/public/nosotros.php" class="btn-secundario hover-btn"> Conoce la clínica </a>
+                <a href="/public/nosotros.php" class="btn-secundario hover-btn"> Conoce a nuestro equipo </a>
             </div>
 
             <div class="intro-home-img">
