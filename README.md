@@ -35,6 +35,14 @@ Aplicación web desarrollada en PHP para la gestión de servicios de una clínic
 - GitHub Desktop
 - phpMyAdmin
 
+## Puesta en marcha
+
+1. Clonar el repositorio.
+2. Importar la base de datos MySQL.
+3. Colocar el proyecto en la carpeta www de Laragon.
+4. Iniciar Apache y MySQL desde Laragon o XAMPP
+5. Acceder desde localhost.
+
 ## Autora
 
 Paola Pérez 
