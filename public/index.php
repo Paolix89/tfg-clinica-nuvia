@@ -11,26 +11,32 @@ require_once '../includes/header.php';
 <main>
 
     <!-- HERO -->
-    <section class="hero-inicio">
+    <section class="hero-inicio hero-home">
 
         <div class="hero-img hero-home-img">
             <img src="/assets/img/clinica.png" alt="Clínica estética">
         </div>
 
-        <div class="hero-overlay-inicio"></div>
         <div class="hero-inicio-contenido">
-            <h1 class="hero-titulo fuente-literata">Clínica Nuvia</h1>
 
-            <p class="hero-texto">Medicina estética y deportiva con un enfoque profesional, cercano y personalizado.</p>
+            <p class="hero-texto hero-texto-home">
+                En Clínica Nuvia combinamos medicina estética, deportiva y bienestar integral para ayudarte a sentirte
+                bien por dentro y por fuera. Trabajamos con un enfoque profesional, cercano y totalmente personalizado,
+                utilizando tratamientos seguros, innovadores y respaldados por la evidencia científica. Nuestro objetivo
+                es realzar tu belleza natural, mejorar tu salud y acompañarte en cada paso hacia tu mejor versión.
+            </p>
 
             <div class="hero-botones">
-                <a href="/public/servicios.php" class="btn-principal">Tratamientos</a>
+                <a href="/public/servicios.php" class="btn-principal">
+                    Tratamientos
+                </a>
 
-                <a href="/public/reservas.php" class="btn-secundario">Reservar cita</a>
+                <a href="/public/reservas.php" class="btn-secundario">
+                    Reservar cita
+                </a>
             </div>
 
         </div>
-
     </section>
 
     <!-- NOSOTROS -->

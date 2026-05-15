@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $nombreImagen = time() . "_" . $_FILES["imagen"]["name"];
 
-        $rutaDestino = "../../assets/img/" . $nombreImagen;
+        $rutaDestino = "../../assets/img/servicios/" . $nombreImagen;
 
         move_uploaded_file($_FILES["imagen"]["tmp_name"], $rutaDestino);
 
-        $imagen = "assets/img/" . $nombreImagen;
+        $imagen = "assets/img/servicios/" . $nombreImagen;
     }
 
     $sql = "INSERT INTO servicios (nombre, descripcion, categoria, imagen, estado) 

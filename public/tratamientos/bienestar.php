@@ -4,7 +4,7 @@
 
     <section class="hero-nos">
         <div class="hero-img">
-            <img src="/assets/img/servicios/hero-bienestar.jpg" alt="Bienestar integral Clínica Nuvia">
+            <img src="/assets/img/hero-bienestar.jpg" alt="Bienestar integral Clínica Nuvia">
         </div>
 
         <div class="hero-overlay"></div>
